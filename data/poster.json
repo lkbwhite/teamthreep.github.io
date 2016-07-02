@@ -1,6 +1,6 @@
 {
-    headline: {
-        title: "쓰리피 팀원모집",
-        subtitle: "<span class='point-char'>P</span>lay"
+    "headline": {
+        "title": "쓰리피 팀원모집",
+        "subtitle": "<span class='point-char'>P</span>lay <span class='point-char'>P</span>et <span class='point-char'>P</span>roject "
     }
 }
