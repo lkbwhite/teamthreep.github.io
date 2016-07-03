@@ -10,10 +10,17 @@ html, body{
     padding-top: 15px;
     padding-bottom: 15px;    
 }
-.mark-3p:before{
+.mark-3p-dark:before{
     content: '3P';
     font-size: 10px;
     padding: 0 2px;
     border: 2px solid #ffffff;
+    margin-right:5px;
+}
+.mark-3p-light:before{
+    content: '3P';
+    font-size: 10px;
+    padding: 0 2px;
+    border: 2px solid #000000;
     margin-right:5px;
 }

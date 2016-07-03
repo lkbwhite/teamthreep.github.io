@@ -3,9 +3,8 @@
 #main-container{                            
     height: 100%;
     width: 100%;    
-    max-width:1600px;
-    background-color: #000000;
-    border-radius: 15px;    
+    max-width:1600px;       
+    border-radius: 10px;    
 }
 #main-container>.row{
     height:100%;
@@ -60,4 +59,38 @@
 }
 #tp-detail{    
     color:#2d2d2d;    
+}
+#tp-detail .headline-wrap{
+    display:table;
+    width:100%;       
+    margin-top:10px;
+}
+#tp-detail .headline{
+    display: table-cell;    
+    position: relative;
+    padding:0;
+    height: 60px;              
+}
+#tp-detail .hl-title{     
+    bottom:0;
+    position: absolute;
+    font-size:25px;    
+}
+#tp-detail .hl-subtitle{       
+    position: absolute;
+    right:0;
+    bottom:0;
+    font-size:16px;
+}
+#tp-detail .hl-subtitle .point-char{
+    font-size:20px;
+}
+#tp-detail .section-wrap{
+    margin-top: 30px;
+}
+#tp-detail .section{
+    margin-top:20px;
+}
+#tp-detail .section .title{
+    margin-bottom: 10px;
 }
