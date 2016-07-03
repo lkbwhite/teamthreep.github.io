@@ -47,11 +47,13 @@
 }
 #tp-poster .section-wrap{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 #tp-poster .section{
     margin-top:20px;
 }
 #tp-poster .section .title{
+    font-size:16px;
     margin-bottom: 10px;
 }
 #tp-detail-wrap{
@@ -87,10 +89,12 @@
 }
 #tp-detail .section-wrap{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 #tp-detail .section{
     margin-top:20px;
 }
 #tp-detail .section .title{
+    font-size:16px;
     margin-bottom: 10px;
 }
