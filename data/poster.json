@@ -3,7 +3,7 @@
         "title": "쓰리피 팀원모집",
         "subtitle": "<span class='point-char'>P</span>lay <span class='point-char'>P</span>et <span class='point-char'>P</span>roject "
     },
-    "sections": {
+    "sections":
         [
             {
                 "title": "팀소개",
@@ -21,6 +21,5 @@
                 "title": "모임의 목적",
                 "contents": "- 팀 프로젝트 : 효율 적인 팀 운영과 git이나 다른 협업도구들을 사용해보고 그 과정을 경험<br>- 새로운 기술 : 회사에서는 사용해보기 힘든 새로운 기술 적용<br>- 내가 만드는 작품 : 누군가 요청이 아닌 각자가 참여하고 제작하는 작품<br>- 오픈소스 : 작은 것이라도 오픈소스를 만들어 보는 것이 목표<br>- 다양한 경험 : 혼자서 하기 힘든 전시회 구경이라던지 다양한 문화생활도 함께 즐기면서 생각 넓히기"
             } 
-        ]
-    }
+        ]    
 }
