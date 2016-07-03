@@ -23,12 +23,7 @@
                                 <div class="col-md-12 hl-subtitle"></div>
                             </div>
                         </div>
-                        <div class="section-wrap">
-                            <div class="row section">
-                                <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span> 팀소개 </div>
-                                <div class="col-md-12 contents"> 펫 프로젝트라고 들어보셨나요? 책에서 접한 개념인데 쉽게말해 취미생활과 같이 즐겁게 하는 프로젝트 입니다. 하지만 혼자서 하긴 쉽지 않더라구요. 그래서! 같이 놀아 볼 팀원을 모집하기로 했습니다. 스터디와는 다르게 부담 없이 하지만 꾸준히 실력을 키우는 팀을 만드는 것이 목표입니다! </div>
-                            </div>
-                        </div>
+                        <div class="section-wrap"></div>
                     </div>
                 </div>
                 <div class="col-md-7" id="tp-detail-wrap">
@@ -44,45 +39,43 @@
                                 <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span> 팀소개 </div>
                                 <div class="col-md-12 contents"> 펫 프로젝트라고 들어보셨나요? 책에서 접한 개념인데 쉽게말해 취미생활과 같이 즐겁게 하는 프로젝트 입니다. 하지만 혼자서 하긴 쉽지 않더라구요. 그래서! 같이 놀아 볼 팀원을 모집하기로 했습니다. 스터디와는 다르게 부담 없이 하지만 꾸준히 실력을 키우는 팀을 만드는 것이 목표입니다! </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript">
-        var baseUrl = "http://teamthreep.github.io";        
+        var baseUrl = "http://teamthreep.github.io";
         $(document).ready(function () {
             $.ajax({
-                url: baseUrl + "/data/poster.json",
-                method: "GET",
-                dataType: "json",
-                success: function (data) {                                        
+                url: baseUrl + "/data/poster.json"
+                , method: "GET"
+                , dataType: "json"
+                , success: function (data) {
                     var headline = data.headline;
                     var sections = data.sections;
                     $("#tp-poster .hl-title").text(headline.title);
-                    $("#tp-poster .hl-subtitle").html(headline.subtitle);   
-                    
-                    var source   = $("#poster-section-template").html();
+                    $("#tp-poster .hl-subtitle").html(headline.subtitle);
+                    var source = $("#poster-section-template").html();
                     var template = Handlebars.compile(source);                    
-                    console.log(sections);
-                    var html    = template(sections);
+                    var html = template(sections);
                     $("#tp-poster .section-wrap").html(html);
                 }
             });
-           
-            
         });
     </script>
-    <script id="poster-section-template" type="text/x-handlebars-template">    
-    {{#each this}}
-    <div class="row section">
-                               <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span> {{title}} </div>
-                                <div class="col-md-12 contents">{{contents}}</div>
-                            </div>  
-    {{/each}}
-    
-</script>
+    <script id="poster-section-template" type="text/x-handlebars-template"> 
+       {{#each this}}
+        <div class="row section">
+            <div class="col-md-12 title"><span class="glyphicon glyphicon-expand"></span> {{title}}</div>
+            <div class="col-md-12 contents"> 
+                {{#each contents}} 
+                   {{this}}<br> 
+                {{/each}}
+            </div>
+        </div> 
+        {{/each}} 
+    </script>
 </body>
-
 </html>
