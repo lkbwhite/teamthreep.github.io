@@ -13,12 +13,23 @@
 #tp-poster{
     background-color: #2d2d2d;
     color:white;
+    padding: 10px;
 }
-#tp-poster>#headline hl-title{
+#tp-poster .headline{
+    height: 120px;
+    text-align: center;
+}
+#tp-poster .hl-title{
     font-size:30px;
 }
-#tp-poster>#headline hl-subtitle point-char{
+#tp-poster .hl-subtitle{
+    font-size:14px;
+}
+#tp-poster .hl-subtitle .point-char{
     font-size:20px;
+}
+#tp-poster .section .title{
+    margin-bottom: 10px;
 }
 #tp-detail{
     background-color: #ffffff;

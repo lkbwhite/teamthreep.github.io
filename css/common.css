@@ -7,3 +7,10 @@ html, body{
 #wrap{
     
 }
+.mark-3p:before{
+    content: '3P';
+    font-size: 10px;
+    padding: 0 2px;
+    border: 2px solid #ffffff;
+    margin-right:5px;
+}

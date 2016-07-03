@@ -16,13 +16,17 @@
             <div class="row">
                 <div class="col-md-5">
                     <div id="tp-poster">
-                        <div class="row" id="headline">
-                            <div id="hl-title" class="col-md-12"></div>
-                            <div id="hl-subtitle" class="col-md-12"></div>
+                        <div class="row headline">
+                            <div class="col-md-12 hl-title"></div>
+                            <div class="col-md-12 hl-subtitle"></div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-4"></div>
-                            <div class="col-xs-6 col-sm-4"></div>
+                        <div class="row section">
+                            <div class="col-md-12 title">
+                                <span class="mark-3p"></span> 팀소개
+                            </div>
+                            <div class="col-md-12 contents">
+                                펫 프로젝트라고 들어보셨나요? 책에서 접한 개념인데 쉽게말해 취미생활과 같이 즐겁게 하는 프로젝트 입니다. 하지만 혼자서 하긴 쉽지 않더라구요. 그래서! 같이 놀아 볼 팀원을 모집하기로 했습니다. 스터디와는 다르게 부담 없이 하지만 꾸준히 실력을 키우는 팀을 만드는 것이 목표입니다!
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,15 +41,16 @@
         </div>
     </div>    
     <script type="text/javascript">
+        var baseUrl = "http://teamthreep.github.io";
         $(document).ready(function(){
             $.ajax({
-                url: "http://teamthreep.github.io/data/poster.json",
+                url: baseUrl + "/data/poster.json",
                 method: "GET",  
                 dataType: "json",
                 success: function(data){
                     var headline = data.headline;
-                    $("#hl-title").text(headline.title);
-                    $("#hl-subtitle").html(headline.subtitle);
+                    $("#tp-poster .hl-title").text(headline.title);
+                    $("#tp-poster .hl-subtitle").html(headline.subtitle);
                 }
             });            
         });        
