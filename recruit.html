@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/handlebars/handlebars-v4.0.5.js"></script>
     <link rel="stylesheet" href="./css/threep-style.css">
     <title>Team Threep</title>
 </head>
@@ -50,20 +51,38 @@
         </div>
     </div>
     <script type="text/javascript">
-        var baseUrl = "http://teamthreep.github.io";
+        var baseUrl = "http://teamthreep.github.io";        
         $(document).ready(function () {
             $.ajax({
-                url: baseUrl + "/data/poster.json"
-                , method: "GET"
-                , dataType: "json"
-                , success: function (data) {
+                url: baseUrl + "/data/poster.json",
+                method: "GET",
+                dataType: "json",
+                success: function (data) {                                        
                     var headline = data.headline;
+                    var sections = data.sections;
                     $("#tp-poster .hl-title").text(headline.title);
-                    $("#tp-poster .hl-subtitle").html(headline.subtitle);
+                    $("#tp-poster .hl-subtitle").html(headline.subtitle);   
+                    
+                    var source   = $("#poster-section-template").html();
+                    var template = Handlebars.compile(source);                    
+                    console.log(sections);
+                    var html    = template(sections);
+                    $("#tp-poster .section-wrap").html(html);
                 }
             });
+           
+            
         });
     </script>
+    <script id="poster-section-template" type="text/x-handlebars-template">    
+    {{#each this}}
+    <div class="row section">
+                               <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span> {{title}} </div>
+                                <div class="col-md-12 contents">{{contents}}</div>
+                            </div>  
+    {{/each}}
+    
+</script>
 </body>
 
 </html>
