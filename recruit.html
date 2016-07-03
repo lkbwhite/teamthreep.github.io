@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/threep-style.css">
+    <title>Team Threep</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="main-container" class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div id="tp-poster">
+                        <div class="row" id="headline">
+                            <div id="hl-title" class="col-md-12"></div>
+                            <div id="hl-subtitle" class="col-md-12"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-4"></div>
+                            <div class="col-xs-6 col-sm-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div id="tp-detail">
+                        <div class="row">                            
+                            <div class="col-md-12">Temp...</div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                url: "http://teamthreep.github.io/data/poster.json",
+                method: "GET",  
+                dataType: "json",
+                success: function(data){
+                    var headline = data.headline;
+                    $("#hl-title").text(headline.title);
+                    $("#hl-subtitle").html(headline.subtitle);
+                }
+            });            
+        });        
+    </script>
+</body>
+</html>
