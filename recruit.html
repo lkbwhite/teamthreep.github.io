@@ -52,11 +52,10 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        var baseUrl = "http://teamthreep.github.io";
+    <script type="text/javascript">        
         $(document).ready(function () {
             $.ajax({
-                url: baseUrl + "/data/poster.json"
+                url: "/data/poster.json"
                 , method: "GET"
                 , dataType: "json"
                 , success: function (data) {
@@ -77,9 +76,7 @@
         <div class="row section">
             <div class="col-md-12 title"><span class="glyphicon glyphicon-expand"></span> {{title}}</div>
             <div class="col-md-12 contents"> 
-                {{#each contents}} 
-                   {{this}}<br> 
-                {{/each}}
+                {{{contents}}}
             </div>
         </div> 
         {{/each}} 
