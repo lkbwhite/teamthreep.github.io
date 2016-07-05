@@ -13,7 +13,10 @@
 </head>
 
 <body>
+   <a href="" onclick="" >체인지</a>
     <div id="wrap">
+      <h1><a href=""/a></a></h1>
+       <a href="" onclick="changeDetail('introduce')" ?></a>
         <div id="main-container" class="container">
             <div class="row">
                 <div class="col-md-5 col-xs-12" id="tp-poster-wrap">
@@ -27,15 +30,9 @@
                         <div class="section-wrap"></div>
                     </div>
                 </div>
-                <div class="col-md-7 hidden-xs" id="tp-detail-wrap">                   
-                    <div id="tp-detail" style="display:table;height:100%;">
-                       <div style="display:table-cell;vertical-align:middle;">
-                        <div style="font-size:30px;text-align:center;">
-                            <img style="width:100%; max-width:300px;" src="images/nodetail.jpg" /><br><br>
-                            자세한 설명 준비중...
-                        </div>
-                        </div>
-                        <!--<div class="headline-wrap">
+                <div class="col-md-7 hidden-xs" id="tp-detail-wrap">
+                    <div id="tp-detail">                       
+                        <div class="headline-wrap">
                             <div class="row headline">
                                 <div class="col-md-4 hl-title">팀소개</div>
                                 <div class="col-md-4 col-md-offset-4 hl-subtitle">더 하고 싶은 이야기...</div>
@@ -43,10 +40,10 @@
                         </div>
                         <div class="section-wrap">
                             <div class="row section">
-                                <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span></div>
+                                <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span> 쓰리피 탄생배경</div>
                                 <div class="col-md-12 contents"></div>
                             </div>
-                        </div>-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,8 +65,44 @@
                     var html = template(sections);
                     $("#tp-poster .section-wrap").html(html);
                 }
-            });
+            });  
+            changeDetail("introdece")
         });
+        
+        var changeDetail = function(type)
+        {      
+            $.ajax({
+                url: "/data/detail.json"
+                , method: "GET"
+                , dataType: "json"
+                , success: function (data) {
+                    var source = $("#detail-template").html();
+                    var template = Handlebars.compile(source);
+                    var html;                    
+                    switch(type)
+                    {
+                        case "index":
+                            template(data.index);
+                            break;
+                        case "introduce":
+                            template(data.introduce);
+                            break;
+                        case "recruitMethod": 
+                            template(data.recruitMethod);
+                            break;
+                        case "recruitMember":
+                            template(data.recruitMember);
+                            break;
+                        case "meetingPlace":
+                            template(data.meetingPlace);
+                            break;
+                            
+                    }
+                    
+                    $("#tp-detail").html(html);
+                }
+            });            
+        }
     </script>
     <script id="poster-section-template" type="text/x-handlebars-template"> 
        {{#each this}}
@@ -81,5 +114,22 @@
         </div> 
         {{/each}} 
     </script>
+    
+    <script id="detail-template" type="text/x-handlebars-template">
+        <div class="headline-wrap">
+                            <div class="row headline">
+                                <div class="col-md-4 hl-title">{{this.headline.title}}</div>
+                                <div class="col-md-4 col-md-offset-4 hl-subtitle">{{this.headline.subtitle}}</div>
+                            </div>
+                        </div>
+                        <div class="section-wrap">
+                            <div class="row section">
+                                <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span> {{this.sections.title}}</div>
+                                <div class="col-md-12 contents">
+                                    {{this.sections.contents}}
+                                </div>
+                            </div>
+                        </div>
+    </script>    
 </body>
 </html>

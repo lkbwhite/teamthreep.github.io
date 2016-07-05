@@ -1,0 +1,72 @@
+{
+    "index":{
+        "headline": {
+            "title": "첫페이지",
+            "subtitle":"들어올 땐 마음대로지만 나갈 땐 아니란다"            
+        },
+        "sections":
+        [
+            {
+                "title": "쓰리피 탄생배경",
+                "contents": "탄생배경 주루룩"
+            }
+            
+        ]    
+    },
+    "introduce":{
+        "headline": {
+            "title": "팀소개",
+            "subtitle":"더 하고 싶은 이야기..."            
+        },
+        "sections":
+        [
+            {
+                "title": "쓰리피 탄생배경",
+                "contents": "탄생배경 주루룩"
+            }
+            
+        ]    
+    },
+    "recruitMethod":{
+        "headline": {
+            "title": "모집방법",
+            "subtitle":""            
+        },
+        "sections":
+        [
+            {
+                "title": "굳이 만나는 이유",
+                "contents": "너랑 만나고 싶어서"
+            }
+            
+        ]    
+    },
+    "recruitMember":{
+        "headline": {
+            "title": "모집인원",
+            "subtitle":""            
+        },
+        "sections":
+        [
+            {
+                "title": "왜 적은 인원인가",
+                "contents": "많으면 장소 잡기 힘듬"
+            }
+            
+        ]    
+    },
+    "meetingPlace":{
+        "headline": {
+            "title": "모임지역",
+            "subtitle":"서울 강남?"            
+        },
+        "sections":
+        [
+            {
+                "title": "강남 근처를 선택한 이유",
+                "contents": "내가 그 근처에 회사를 다님"
+            }
+            
+        ]    
+    }
+}
