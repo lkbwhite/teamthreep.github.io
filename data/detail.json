@@ -1,12 +1,13 @@
 {
     "index":{
+        "isIndex": true,
         "headline": {
             "title": "첫페이지",
-            "subtitle":"들어올 땐 마음대로지만<br> 나갈 땐 아니란다"            
+            "subtitle":""            
         },
-        "sections": {
+        "sections": {                
                 "title": "쓰리피 탄생배경",
-                "contents": "탄생배경 주루룩"
+                "contents": "<div align=\"center\"><img style=\"margin-top:10%;width:80%;\" src=\"./images/maintenance.png\" /></div>"
         }            
             
     },

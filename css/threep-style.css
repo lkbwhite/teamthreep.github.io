@@ -29,6 +29,7 @@
 #tp-poster .headline-wrap{
     display:table;
     margin:0 auto;
+    cursor: pointer;
 }
 #tp-poster .headline{    
     height: 120px;
@@ -36,7 +37,7 @@
     display:table-cell;
     vertical-align:middle;
 }
-#tp-poster .hl-title{
+#tp-poster .hl-title{    
     font-size:30px;
 }
 #tp-poster .hl-subtitle{
@@ -52,9 +53,12 @@
 #tp-poster .section{
     margin-top:20px;
 }
-#tp-poster .section .title{
+#tp-poster .section .title{    
     font-size:16px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
+}
+#tp-poster .section .title a{    
+    color:#c1d6ff;
 }
 #tp-detail-wrap{
     background-color: #ffffff;

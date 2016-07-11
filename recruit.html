@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-5 col-xs-12" id="tp-poster-wrap">
                     <div id="tp-poster">
-                        <div class="headline-wrap">
+                        <div class="headline-wrap" onclick="changeDetail('index'); return false;">
                             <div class="row headline">
                                 <div class="col-md-12 hl-title"></div>
                                 <div class="col-md-12 hl-subtitle"></div>
@@ -91,26 +91,30 @@
     <script id="poster-section-template" type="text/x-handlebars-template"> 
        {{#each this}}
         <div class="row section">
-            <div class="col-md-12 title"><span class="glyphicon glyphicon-expand"></span> {{title}}</div>
+            <div class="col-md-12 title"><span class="glyphicon glyphicon-expand"></span> {{{title}}}</div>
             <div class="col-md-12 contents"> 
                 {{{contents}}}
             </div>
         </div> 
         {{/each}} 
     </script>    
-    <script id="detail-template" type="text/x-handlebars-template">
+    <script id="detail-template" type="text/x-handlebars-template">        
         <div class="headline-wrap">
             <div class="row headline">
                 <div class="col-md-4 hl-title">{{headline.title}}</div>
                 <div class="col-md-4 col-md-offset-4 hl-subtitle">{{{headline.subtitle}}}</div>
             </div>
         </div>
+        {{#if isIndex}}
+            {{{sections.contents}}}
+        {{else }}
         <div class="section-wrap">
             <div class="row section">
                 <div class="col-md-12 title"> <span class="glyphicon glyphicon-expand"></span> {{sections.title}}</div>
                 <div class="col-md-12 contents"> {{{sections.contents}}} </div>
             </div>
         </div>
+        {{/if}}        
     </script>
 </body>
 </html>
