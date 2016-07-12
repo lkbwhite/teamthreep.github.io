@@ -6,8 +6,8 @@
             "subtitle":""            
         },
         "sections": {                
-                "title": "쓰리피 탄생배경",
-                "contents": "<div align=\"center\"><img style=\"margin-top:10%;width:50%;\" src=\"./images/thream.jpg\" /><br><img style=\"width:50%;\" src=\"./images/siwon.jpg\" /></div>"
+                "title": "",
+                "contents": "<div align=\"center\"><img style=\"margin-top:5%;width:57%;\" src=\"./images/thream.jpg\" /><br><img style=\"width:57%;\" src=\"./images/siwon.jpg\" /></div>"
         }            
             
     },
