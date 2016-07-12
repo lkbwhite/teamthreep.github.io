@@ -57,6 +57,10 @@
     font-size:16px;
     margin-bottom: 10px;    
 }
+#tp-poster .section .poster-title-icon{    
+    margin-right:0.5em;
+    color:#2d2d2d;
+}
 #tp-poster .section .title a{    
     color:#c1d6ff;
 }
